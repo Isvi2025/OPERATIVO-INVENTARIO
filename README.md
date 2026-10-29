@@ -229,34 +229,10 @@ td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
 <body>
 
 <!-- ===================== HEADER CORPORATIVO ISVI ===================== -->
-<div class="topbar">
-  <div class="topbar-inner">
-    <div class="logo" title="ISVI">
-      <!-- Logo ISVI en SVG (escalable, sin dependencias externas) -->
-      <svg viewBox="0 0 220 64" role="img" aria-label="ISVI">
-        <!-- Isotipo: escudo/hexágono verde -->
-        <path d="M32 2 L60 17 L60 47 L32 62 L4 47 L4 17 Z" fill="#03382E"/>
-        <path d="M32 10 L53 21 L53 43 L32 54 L11 43 L11 21 Z" fill="#0b5c4c"/>
-        <!-- Letra I -->
-        <rect x="27" y="22" width="5" height="20" rx="1.5" fill="#ffffff"/>
-        <!-- Letra S -->
-        <path d="M36 25c0-2.2 1.8-4 4.2-4h6v4h-5.2c-.7 0-1 .3-1 .8s.3.8 1 .9l3.6.6c2.4.4 3.8 1.9 3.8 4.2 0 2.6-2 4.3-4.8 4.3h-6.4v-4h5.6c.8 0 1.1-.3 1.1-.9s-.3-.8-1-.9l-3.4-.6c-2.4-.4-3.5-1.9-3.5-4.4z" fill="#ffffff"/>
-        <!-- Letra V -->
-        <path d="M49 21h4.4l3.1 12.6L59.6 21H64l-4.6 21h-4.9z" fill="#ffffff"/>
-        <!-- Letra I final -->
-        <rect x="66" y="22" width="5" height="20" rx="1.5" fill="#ffffff"/>
-        <!-- Texto ISVI grande a la derecha -->
-        <text x="82" y="40" font-family="system-ui,Segoe UI,Roboto,sans-serif" font-size="30" font-weight="800" fill="#03382E" letter-spacing="1">ISVI</text>
-        <text x="83" y="54" font-family="system-ui,Segoe UI,Roboto,sans-serif" font-size="8.5" font-weight="600" fill="#0b5c4c" letter-spacing="2.6">SEGURIDAD INTEGRAL</text>
-      </svg>
-    </div>
-    <div>
-      <h1>Base Operativa</h1>
-      <p class="subtitle">Dashboard de personal · Octubre 2026</p>
-    </div>
-    <div class="spacer"></div>
-    <span class="badge">ISVI · Control Operativo</span>
-  </div>
+<div class="logo" title="ISVI">
+  <img src="https://isvi.com/wp-content/uploads/2023/05/logo-isvi.png" 
+       alt="ISVI" 
+       style="height:38px;width:auto;display:block;">
 </div>
 
 <!-- ===================== CONTENIDO ===================== -->
