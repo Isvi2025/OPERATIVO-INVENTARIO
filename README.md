@@ -230,9 +230,7 @@ td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
 
 <!-- ===================== HEADER CORPORATIVO ISVI ===================== -->
 <div class="logo" title="ISVI">
-  <img src="https://isvi.com/wp-content/uploads/2023/05/logo-isvi.png" 
-       alt="ISVI" 
-       style="height:38px;width:auto;display:block;">
+  <img src=""https://isvi.com/wp-content/uploads/2023/05/logo-isvi.png" alt="ISVI" style="height:38px;width:auto;display:block;">
 </div>
 
 <!-- ===================== CONTENIDO ===================== -->
