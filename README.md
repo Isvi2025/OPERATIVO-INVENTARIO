@@ -1,6 +1,8 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Dashboard Base Operativa</title>
 <style>
 :root{--bg:#f4f4f2;--surface:#fcfcfb;--ink:#0b0b0b;--ink2:#52514e;--muted:#8a8984;--line:#e3e2de;--s1:#2a78d6;--s1soft:#cfe0f6;--ok:#1baf7a;--hover:#eef3fb}
@@ -103,6 +105,6 @@ $('pv').onclick=()=>{pg--;render()};$('nx').onclick=()=>{pg++;render()};
 if($('csv'))$('csv').onclick=()=>{const rows=[['Encargado','Puesto','Nombre','Cargo','Ciudad/Sede','Vehiculo','Arma','Chaleco'],...window._f.map(d=>[d.enc,d.pue,d.nom,d.car,d.ciu,d.veh,d.arm,d.cha])];
  const b=new Blob(['﻿'+rows.map(r=>r.map(x=>'"'+String(x||'').replace(/"/g,'""')+'"').join(',')).join('\n')],{type:'text/csv'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='base_operativa_filtrada.csv';a.click()};
 render();
-</script></body></html>
-
-</body></html>
+</script>
+</body>
+</html>
