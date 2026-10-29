@@ -1,8 +1,5 @@
 <!doctype html>
-<html lang="es">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Dashboard Base Operativa</title>
 <style>
 :root{--bg:#f4f4f2;--surface:#fcfcfb;--ink:#0b0b0b;--ink2:#52514e;--muted:#8a8984;--line:#e3e2de;--s1:#2a78d6;--s1soft:#cfe0f6;--ok:#1baf7a;--hover:#eef3fb}
@@ -12,6 +9,7 @@
 .wrap{max-width:1280px;margin:0 auto;padding:20px 16px 40px}
 header{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap;margin-bottom:14px}
 h1{font-size:22px;margin:0}header p{margin:2px 0 0;color:var(--ink2)}
+.brand{display:flex;align-items:center;gap:14px}.brand img{height:48px;width:auto;background:#fff;border-radius:8px;padding:4px 8px}
 .btn{background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:7px 12px;cursor:pointer;font:inherit}
 .btn:hover{background:var(--hover)}
 .filters{display:flex;flex-wrap:wrap;gap:10px;align-items:end;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:14px}
@@ -30,8 +28,8 @@ h2{font-size:14px;margin:0 0 2px}.sub{color:var(--muted);font-size:12px;margin-b
 .row .b{height:12px;background:transparent;position:relative}.row .b i{position:absolute;left:0;top:0;bottom:0;background:var(--s1);border-radius:0 4px 4px 0;min-width:2px}
 .row .c{text-align:right;font-variant-numeric:tabular-nums}
 .tip{position:fixed;pointer-events:none;background:var(--ink);color:var(--bg);padding:6px 9px;border-radius:6px;font-size:12px;display:none;z-index:9;max-width:260px}
-table{width:100%;border-collapse:collapse;font-size:12.5px}th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line)}
-th{color:var(--muted);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.04em;cursor:pointer;white-space:nowrap;position:sticky;top:0;background:var(--surface)}
+table{width:100%;border-collapse:collapse;font-size:12.5px;background:var(--surface)!important;color:var(--ink)!important}th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line);background:var(--surface)!important;color:var(--ink)!important}
+th{color:var(--muted);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.04em;cursor:pointer;white-space:nowrap;position:sticky;top:0;color:var(--muted)!important}
 td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
 .tw{max-height:420px;overflow:auto}
 .pill{display:inline-block;padding:1px 8px;border-radius:10px;font-size:11px;font-weight:600}.si{background:var(--s1soft);color:var(--ink)}.no{color:var(--muted);border:1px solid var(--line)}
@@ -39,7 +37,7 @@ td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
 .chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}.chip{background:var(--s1soft);border-radius:14px;padding:3px 10px;font-size:12px;cursor:pointer}
 .empty{color:var(--muted);padding:12px}
 </style></head><body><div class="wrap">
-<header><div><h1>Base operativa · Octubre 2026</h1><p id="hs"></p></div><div style="display:flex;gap:8px"><button class="btn" id="reset">Limpiar filtros</button></div></header>
+<header><div class="brand"><img src="https://isvi.com/wp-content/uploads/2026/09/logo-isvi.png" alt="ISVI" onerror="this.style.display='none'"><div><h1>Base operativa · Octubre 2026</h1><p id="hs"></p></div></div><div style="display:flex;gap:8px"><button class="btn" id="reset">Limpiar filtros</button></div></header>
 <div class="filters">
 <label>Encargado<select id="f_enc"></select></label><label>Puesto<select id="f_pue"></select></label><label>Cargo<select id="f_car"></select></label>
 <label>Vehículo<select id="f_veh"></select></label><label>Arma<select id="f_arm"></select></label><label>Chaleco<select id="f_cha"></select></label>
@@ -105,6 +103,4 @@ $('pv').onclick=()=>{pg--;render()};$('nx').onclick=()=>{pg++;render()};
 if($('csv'))$('csv').onclick=()=>{const rows=[['Encargado','Puesto','Nombre','Cargo','Ciudad/Sede','Vehiculo','Arma','Chaleco'],...window._f.map(d=>[d.enc,d.pue,d.nom,d.car,d.ciu,d.veh,d.arm,d.cha])];
  const b=new Blob(['﻿'+rows.map(r=>r.map(x=>'"'+String(x||'').replace(/"/g,'""')+'"').join(',')).join('\n')],{type:'text/csv'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='base_operativa_filtrada.csv';a.click()};
 render();
-</script>
-</body>
-</html>
+</script></body></html>
